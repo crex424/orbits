@@ -36,6 +36,11 @@ int main() {
             }
         }
 
+        // Remove all orbiters when START is pressed and return Center to center.
+        if (bn::keypad::start_pressed()) {
+            orbiters.clear();
+        }
+
         center.update();
         for(Orbiter& orbiter : orbiters) {
             orbiter.update();
